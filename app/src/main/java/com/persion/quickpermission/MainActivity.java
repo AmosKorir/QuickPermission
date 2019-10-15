@@ -22,15 +22,16 @@ public class MainActivity extends AppCompatActivity {
     quickPermission = new QuickPermission(this);
     permissionButton = findViewById(R.id.permissionBtn);
 
-    permissionButton.setOnClickListener(v -> quickPermission.quick(Manifest.permission.CAMERA, 200, new QuickPermissionListener() {
-      @Override public void permissionGranted() {
-        Toast.makeText(MainActivity.this, "Permission granted", Toast.LENGTH_SHORT).show();
-      }
+    permissionButton.setOnClickListener(v ->
+        quickPermission.quick(Manifest.permission.CAMERA, 200, new QuickPermissionListener() {
+          @Override public void permissionGranted() {
+            Toast.makeText(MainActivity.this, "Permission granted", Toast.LENGTH_SHORT).show();
+          }
 
-      @Override public void permissionDenied() {
-        Toast.makeText(MainActivity.this, "permission denied", Toast.LENGTH_SHORT).show();
-      }
-    }));
+          @Override public void permissionDenied() {
+            Toast.makeText(MainActivity.this, "permission denied", Toast.LENGTH_SHORT).show();
+          }
+        }));
   }
 
   @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,

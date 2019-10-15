@@ -8,7 +8,7 @@ import androidx.core.content.ContextCompat;
 
 /**
  * Created by Korir on 10/15/19.
- * amoskrr@gmail.com0724324545
+ * amoskrr@gmail.com
  */
 public class QuickPermission {
   private Activity activity;

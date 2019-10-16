@@ -1,3 +1,5 @@
+<img src="https://github.com/skyways/QuickPermission/blob/master/app/src/main/res/drawable-v24/quickpermission.png"/>
+
 # QuickPermission
 
 [ ![Download](https://api.bintray.com/packages/skyways/QuickPermission/QuickPermission/images/download.svg) ](https://bintray.com/skyways/QuickPermission/QuickPermission/_latestVersion)

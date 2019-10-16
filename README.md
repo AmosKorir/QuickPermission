@@ -4,11 +4,25 @@
 
 This a simple android library that make it easy to request run-time permission.
 
-installation
+## installation
+```java
+ implementation 'com.persion.quickpermissionlib:QuickPermission:0.0.1'
+ 
+ ```
+## Add permission to manifest.
+ here is an example.
+ ```java
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.persion.quickpermission">
 
+  <uses-permission android:name="android.permission.CAMERA"/>
 
-Usage
-```
+  <application
+  ....
+ ```
+
+## Usage
+```java
  QuickPermission quickPermission;
  
  quickPermission = new QuickPermission(this);
@@ -25,9 +39,9 @@ Usage
  
  
  ```
- finally
+## finally
  
- ```
+ ```java
   @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
       @NonNull int[] grantResults) {
     super.onRequestPermissionsResult(requestCode, permissions, grantResults);

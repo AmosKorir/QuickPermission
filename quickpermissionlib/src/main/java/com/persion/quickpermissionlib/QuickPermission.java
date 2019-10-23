@@ -1,6 +1,5 @@
 package com.persion.quickpermissionlib;
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import androidx.core.app.ActivityCompat;
@@ -39,13 +38,17 @@ public class QuickPermission {
 
   //request for permission
   public boolean requestPermission(String permission, int permissionCode) {
-    if (ContextCompat.checkSelfPermission(activity,
-        Manifest.permission.READ_CONTACTS)
+    if (ContextCompat.checkSelfPermission(activity, permission)
         != PackageManager.PERMISSION_GRANTED) {
 
-      ActivityCompat.requestPermissions(activity,
-          new String[] { permission },
-          permissionCode);
+      if (ActivityCompat.shouldShowRequestPermissionRationale(activity,
+          permission)) {
+        permissionListener.showRationale();
+      } else {
+        ActivityCompat.requestPermissions(activity,
+            new String[] { permission },
+            permissionCode);
+      }
     } else {
       return true;
     }
@@ -84,7 +87,8 @@ public class QuickPermission {
           && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
         permissionListener.permissionGranted();
       } else {
-        permissionListener.permissionGranted();
+
+        permissionListener.permissionDenied();
       }
       return;
     }

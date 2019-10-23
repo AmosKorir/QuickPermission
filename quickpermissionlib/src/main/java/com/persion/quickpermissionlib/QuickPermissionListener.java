@@ -8,4 +8,6 @@ public interface QuickPermissionListener {
   void permissionGranted();
 
   void permissionDenied();
+
+  void showRationale();
 }

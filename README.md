@@ -8,7 +8,7 @@ This a simple android library that make it easy to request run-time permission.
 
 ## installation
 ```java
- implementation 'com.persion.quickpermissionlib:QuickPermission:0.0.1'
+ implementation 'com.persion.quickpermissionlib:QuickPermission:0.0.2'
  
  ```
 ## Add permission to manifest.

@@ -31,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
           @Override public void permissionDenied() {
             Toast.makeText(MainActivity.this, "permission denied", Toast.LENGTH_SHORT).show();
           }
+
+          @Override public void showRationale() {
+            Toast.makeText(MainActivity.this, "the reason permission is required",
+                Toast.LENGTH_SHORT).show();
+          }
         }));
   }
 
